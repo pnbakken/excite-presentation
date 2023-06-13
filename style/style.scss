@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import "./partials/colour-variables";
+@import "./partials/typography";
+@import "./partials/utility";
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+
+    background-color: $colour-background;
+}
+
+* {
+    border: 1px solid red;
+}

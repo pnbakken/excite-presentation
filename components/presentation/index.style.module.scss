@@ -1,0 +1,39 @@
+.slide {
+    min-height: 90vh;
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    @media(max-width: 768px) {
+        padding: 0.5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        width: 100%;
+
+        @media(max-width: 768px) {
+            font-size: 1rem;
+        }
+    }
+
+    input {
+        max-width: 100% !important;
+        font-size: 1rem;
+    }
+}
+
+.slideTitle {
+    font-size: 3rem;
+}
+
+.AnswerSlide {}
+
+.QuestionSlide {
+    justify-content: flex-start;
+    font-style: italic;
+}

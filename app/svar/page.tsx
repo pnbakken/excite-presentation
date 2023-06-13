@@ -1,16 +1,13 @@
-import Banner from "@/components/banner";
+import CardContainer from "@/components/container/card-container";
 
-export default function Home() {
+const page = () => {
   return (
     <main className={`flex-c full-width full-height top-level-indent`}>
       <div className={`flex-c full-width xl-component-width gap-md`}>
-        <section>
-          <Banner />
-        </section>
-        <section>
-          
-        </section>
+        <CardContainer />
       </div>
     </main>
   );
-}
+};
+
+export default page;

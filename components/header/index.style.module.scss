@@ -1,0 +1,17 @@
+@import "/style/partials/colour-variables";
+
+.Header {
+  /* Your styles here */
+}
+
+.navMain {
+  font-size: 1.125rem;
+}
+
+.navLink {
+  color: #696969;
+
+  &.active {
+    color: #000;
+  }
+}
