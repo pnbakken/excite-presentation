@@ -13,7 +13,7 @@ const Answer1 = () => {
     <AnswerPresentation>
       <>
         <QuestionSlide>
-          <div className={`flex-c full-width tw-mb-32`}>
+          <div className={`flex-c full-width tw-mb-16`}>
             <h1>Spørsmål 1</h1>
           </div>
           <p className="full-width">

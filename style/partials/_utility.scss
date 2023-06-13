@@ -298,6 +298,12 @@
     text-decoration: none;
 }
 
+.demo-button {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #cacaca;
+}
+
 .bordered {
     border: 1px solid $colour-primary;
 }
@@ -339,5 +345,5 @@
 
 .hide-overflow {
     overflow: hidden;
-
+    overflow-x: scroll;
 }

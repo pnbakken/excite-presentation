@@ -32,4 +32,6 @@ const cards = [
   { title: "Spørsmål 2", href: "svar/2" },
   { title: "Spørsmål 3", href: "svar/3" },
   { title: "Spørsmål 4", href: "svar/4" },
+  { title: "Spørsmål 5", href: "svar/5" },
+  { title: "Spørsmål 6 & 7", href: "svar/6" },
 ];

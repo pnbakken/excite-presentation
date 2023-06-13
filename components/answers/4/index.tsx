@@ -35,7 +35,7 @@ const Answer4 = () => {
     <AnswerPresentation>
       <>
         <QuestionSlide>
-          <div className={`flex-c full-width tw-mb-32`}>
+          <div className={`flex-c full-width tw-mb-16`}>
             <h1>Spørsmål 4</h1>
           </div>
           <p>
@@ -67,21 +67,35 @@ const Answer4 = () => {
             (på enkelte mobiler kan man også få tilgang til kameraet med denne
             metoden)
           </p>
+          <div className="slide hidden full-width">
+            <button
+              id="file-button"
+              onClick={uploadFile}
+              aria-label="prøv"
+              className="demo-button"
+            >
+              Prøv
+            </button>
+            <input type="file" id="file-input" style={{ display: "none" }} />
+          </div>
         </AnswerSlide>
         <AnswerSlide className="slide hidden">
           <p className="slide hidden">
             Dersom man i tillegg bruker JavaScript får man tilgang til flere
-            maskinvarefunksjoner.
+            maskinvarefunksjoner, for eksempel geolokalisering.
           </p>
+          <SyntaxHighlight content={geolocationExample} />
           <div className="full-width">
-            <h2>Geolokalisering</h2>
-            <button onClick={geolocationDemo} aria-label="prøv">
+            <button
+              onClick={geolocationDemo}
+              aria-label="prøv"
+              className="demo-button"
+            >
               Prøv
             </button>
           </div>
 
           <div id="geoTarget" />
-          <SyntaxHighlight content={geolocationExample} />
         </AnswerSlide>
       </>
     </AnswerPresentation>
@@ -89,6 +103,14 @@ const Answer4 = () => {
 };
 
 export default Answer4;
+
+/**
+ * Function to trigger a click event on a hidden file input element.
+ * NOTE: This is technically not pure HTML, it's a workaround used because the HTML file input was causing layout issues.
+ */
+const uploadFile = () => {
+  $("#file-input").click();
+};
 
 const geolocationExample = `navigator.geolocation.getCurrentPosition();`;
 
@@ -106,9 +128,9 @@ const geolocationDemo = () => {
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(function (position) {
       $("#geoTarget").html(
-        "Latitude: " +
+        "Breddegrad: " +
           position.coords.latitude +
-          "<br>Longitude: " +
+          "<br>Høydegrad: " +
           position.coords.longitude
       );
     });

@@ -14,7 +14,7 @@ const Answer2 = () => {
       <>
         <section>
           <QuestionSlide>
-            <div className={`flex-c full-width tw-mb-32`}>
+            <div className={`flex-c full-width tw-mb-16`}>
               <h1>Spørsmål 2</h1>
             </div>
             <p className="full-width">
