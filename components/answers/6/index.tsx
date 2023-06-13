@@ -6,8 +6,16 @@ import {
   AnswerSlide,
   QuestionSlide,
 } from "@/components/presentation";
+import Loader from "@/components/utility/loader";
+import { useState, useEffect } from "react";
 
 const Answer6 = () => {
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return <Loader />;
   return (
     <AnswerPresentation>
       <>
