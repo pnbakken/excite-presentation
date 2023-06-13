@@ -7,10 +7,20 @@
 @import "./partials/typography";
 @import "./partials/utility";
 
+html,
+body {
+    overflow-x: scroll;
+    max-width: 100%;
+}
+
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 
     background-color: $colour-background;
+}
+
+* {
+    // border: 1px solid red;
 }

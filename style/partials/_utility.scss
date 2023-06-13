@@ -275,6 +275,10 @@
     position: absolute;
 }
 
+.relative {
+    position: relative;
+}
+
 .discrete {
     background: none;
     border: none;
@@ -344,6 +348,6 @@
 }
 
 .hide-overflow {
-    overflow: hidden;
-    overflow-x: scroll;
+
+    overflow: scroll;
 }

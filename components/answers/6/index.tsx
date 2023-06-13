@@ -7,7 +7,9 @@ import {
   QuestionSlide,
 } from "@/components/presentation";
 import Loader from "@/components/utility/loader";
+import OverflowWrapper from "@/components/utility/overflow-wrapper";
 import SyntaxHighlight from "@/components/utility/syntax-highlight";
+import { Html } from "next/document";
 import { useState, useEffect } from "react";
 
 const Answer6 = () => {
@@ -32,10 +34,10 @@ const Answer6 = () => {
             ser ut
           </p>
           <p>
-            7: Manipuler HTML-koden med jQuery, og hvis hvordan følgende
+            7: Manipuler HTML-koden med jQuery, og vis hvordan følgende
             operasjoner ser ut med jQuery-metoder:
           </p>
-          <ul className="flex-c gap-xs">
+          <ul className="flex-c gap-xs no-list-style full-width">
             <li>
               Endre tekstfarge på ytterste &lt;div&gt; fra nåværende til
               selvvalgt farge som synes på bakgrunnsfargen
@@ -54,8 +56,10 @@ const Answer6 = () => {
           <p>
             <span className="leading-letter">A:</span>
           </p>
-          <DOMManipulationMenu />
-          <div className="full-width hide-overflow">
+
+          <div className="full-width flex-c gap-sm">
+            <DOMManipulationMenu />
+
             <HTMLAsComponent />
           </div>
         </AnswerSlide>
@@ -88,44 +92,46 @@ export default Answer6;
 
 function HTMLAsComponent() {
   return (
-    <div
-      id="my-table-contaier"
-      className="table-container"
-      style={{
-        width: "1890px",
-        height: "500px",
-        backgroundColor: "#163d64",
-        color: "white",
-        borderRadius: "10px",
-      }}
-    >
-      <h1 className="table-heading">Min nydelige tabell</h1>
+    <div className="full-width hide-overflow relative">
+      <div
+        id="my-table-contaier"
+        className="table-container"
+        style={{
+          width: "1890px",
+          height: "500px",
+          backgroundColor: "#163d64",
+          color: "white",
+          borderRadius: "10px",
+        }}
+      >
+        <h1 className="table-heading">Min nydelige tabell</h1>
 
-      <div className="bottom-element">
-        <span>Powered by Excite Technologies</span>
+        <div className="bottom-element">
+          <span>Powered by Excite Technologies</span>
+        </div>
+
+        <table className="the-actual-table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-
-      <table className="the-actual-table">
-        <thead>
-          <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-          </tr>
-          <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   );
 }
@@ -138,7 +144,10 @@ const changeHeadingCode = `$(".table-heading").text("Company overview");`;
 const moveBottomElementCode = ` let $bottomElement = $(".bottom-element").detach();
 $(".the-actual-table").after($bottomElement);`;
 
-const htmlAsCode = `<div id="my-table-contaier" class="table-container" style="width: 1890px; height: 500px; background-color:#163d64; color: white; border-radius: 10px;">
+const htmlAsCode = `<div id="my-table-contaier" class="table-container" 
+style="width: 1890px; height: 500px; 
+background-color:#163d64; color: white; 
+border-radius: 10px;">
 
 <h1 class="table-heading">Min nydelige tabell</h1>
 

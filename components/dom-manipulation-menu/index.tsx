@@ -7,7 +7,7 @@ import $ from "jquery";
 const DOMManipulationMenu = () => {
   return (
     <div
-      className={`${style.DOMManipulationMenu} full-width tw-p-5 flex-r wrap justify-evenly`}
+      className={`${style.DOMManipulationMenu} full-width tw-p-5 flex-r wrap justify-between gap-sm`}
     >
       <SelectColour />
       <ChangeHeading />
@@ -37,7 +37,7 @@ function SelectColour() {
 
   return (
     <select onChange={handleColourSelect}>
-      <option value="">Velg farge</option>
+      <option value="">Velg tekstfarge</option>
 
       <option value="lightblue">Blå</option>
       <option value="hotpink">Rosa</option>
@@ -51,7 +51,15 @@ function ChangeHeading() {
     $(".table-heading").text("Company overview");
   }
 
-  return <button onClick={handleButtonClick}>Endre overskrift</button>;
+  return (
+    <button
+      onClick={handleButtonClick}
+      aria-label="endre overskrift"
+      className="demo-button"
+    >
+      Endre overskrift
+    </button>
+  );
 }
 
 function MoveBottomElement() {
@@ -60,5 +68,13 @@ function MoveBottomElement() {
     $(".the-actual-table").after($bottomElement);
   }
 
-  return <button onClick={handleButtonClick}>Flytt element til bunnen</button>;
+  return (
+    <button
+      onClick={handleButtonClick}
+      aria-label="flytt element til bunnen"
+      className="demo-button"
+    >
+      Flytt element
+    </button>
+  );
 }

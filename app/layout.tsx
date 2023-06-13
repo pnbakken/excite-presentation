@@ -3,6 +3,7 @@ import "/style/style.scss";
 import { Inter } from "next/font/google";
 import Footer from "@/components/footer";
 import { ClientComponent } from "@/components/utility/client-component";
+import OverflowWrapper from "@/components/utility/overflow-wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ClientComponent>
           <Header />
-          {children}
+          <OverflowWrapper>{children}</OverflowWrapper>
           <Footer />
         </ClientComponent>
       </body>
