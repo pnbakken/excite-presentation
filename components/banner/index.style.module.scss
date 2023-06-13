@@ -1,4 +1,33 @@
 .Banner {
   min-height: 50vh;
+  background-image: url("/pexels-pixabay-270404.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
 
+  @media(max-width: 768px) {
+    padding: 0.25rem;
+  }
+
+
+}
+
+.Banner::before {
+
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+
+  background: #001f58;
+  background: linear-gradient(45deg, rgba(#001f58, 1) 25%, rgba(#001f58, 0.3) 100%);
+  border-radius: 8px;
+  z-index: -1;
 }

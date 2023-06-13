@@ -7,6 +7,7 @@ import {
   QuestionSlide,
 } from "@/components/presentation";
 import Loader from "@/components/utility/loader";
+import OverflowWrapper from "@/components/utility/overflow-wrapper";
 import SyntaxHighlight from "@/components/utility/syntax-highlight";
 import { useState, useEffect } from "react";
 
@@ -88,6 +89,10 @@ const Answer6 = () => {
 
 export default Answer6;
 
+/**
+ * Refactored to React component
+ * @returns React.Component
+ */
 function HTMLAsComponent() {
   return (
     <div className="full-width hide-overflow relative">

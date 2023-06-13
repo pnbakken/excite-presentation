@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import style from "./index.style.module.scss";
 import animateOnScroll from "../utility/animate-on-scroll";
 import $ from "jquery";
+import Link from "next/link";
 export const AnswerPresentation = ({
   children,
 }: {
@@ -33,6 +34,10 @@ export const AnswerPresentation = ({
       className={`${style.AnswerPresentation} flex-c align-center justify-center full-width full-height xl-component-width`}
     >
       {children}
+
+      <div className="full-width">
+        <Link href="/svar">Svaroversikt</Link>
+      </div>
     </div>
   );
 };

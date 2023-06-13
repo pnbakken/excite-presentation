@@ -45,8 +45,8 @@ const Answer2 = () => {
             <p className="slide hidden">
               jQuery ble designet for å forenkle scripting av HTML på
               klient-siden. Med andre ord, er det ikke et separat
-              programmeringsspråk, men et sett med godt konstruert,
-              fleranvendelig JavaScript kode.
+              programmeringsspråk, men et sett med fleranvendelige
+              JavaScript-funksjoner.
             </p>
             <p className="slide hidden">
               Det gir metoder og funksjoner som gjør det lettere å bruke
