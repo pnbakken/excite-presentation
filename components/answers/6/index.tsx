@@ -7,6 +7,7 @@ import {
   QuestionSlide,
 } from "@/components/presentation";
 import Loader from "@/components/utility/loader";
+import SyntaxHighlight from "@/components/utility/syntax-highlight";
 import { useState, useEffect } from "react";
 
 const Answer6 = () => {
@@ -56,6 +57,26 @@ const Answer6 = () => {
           <DOMManipulationMenu />
           <div className="full-width hide-overflow">
             <HTMLAsComponent />
+          </div>
+        </AnswerSlide>
+        <AnswerSlide className="slide hidden">
+          <div className="slide hidden full-width">
+            <p className="larger-text">Endre farge:</p>
+            <SyntaxHighlight content={changeColorCode} />
+          </div>
+          <div className="slide hidden full-width">
+            <p className="larger-text">Endre overskrift:</p>
+            <SyntaxHighlight content={changeHeadingCode} />
+          </div>
+          <div className="slide hidden full-width">
+            <p className="larger-text">Flytt element:</p>
+            <SyntaxHighlight content={moveBottomElementCode} />
+          </div>
+        </AnswerSlide>
+        <AnswerSlide>
+          <div className="full-width slide hidden">
+            <p className="larger-html">Original HTML:</p>
+            <SyntaxHighlight content={htmlAsCode} />
           </div>
         </AnswerSlide>
       </>
@@ -108,6 +129,14 @@ function HTMLAsComponent() {
     </div>
   );
 }
+
+const changeColorCode = `if (selectedColour) {
+    $("#my-table-contaier").css("color", selectedColour);
+  }`;
+
+const changeHeadingCode = `$(".table-heading").text("Company overview");`;
+const moveBottomElementCode = ` let $bottomElement = $(".bottom-element").detach();
+$(".the-actual-table").after($bottomElement);`;
 
 const htmlAsCode = `<div id="my-table-contaier" class="table-container" style="width: 1890px; height: 500px; background-color:#163d64; color: white; border-radius: 10px;">
 
