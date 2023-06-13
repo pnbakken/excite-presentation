@@ -1,15 +1,13 @@
 "use client";
 
-import DOMManipulationMenu from "@/components/dom-manipulation-menu";
+import DOMManipulationMenu from "../../dom-manipulation-menu";
 import {
   AnswerPresentation,
   AnswerSlide,
   QuestionSlide,
 } from "@/components/presentation";
 import Loader from "@/components/utility/loader";
-import OverflowWrapper from "@/components/utility/overflow-wrapper";
 import SyntaxHighlight from "@/components/utility/syntax-highlight";
-import { Html } from "next/document";
 import { useState, useEffect } from "react";
 
 const Answer6 = () => {
