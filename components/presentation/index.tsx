@@ -33,10 +33,13 @@ export const AnswerPresentation = ({
     <div
       className={`${style.AnswerPresentation} flex-c align-center justify-center full-width full-height xl-component-width`}
     >
+      <div className="full-width">
+        <Link href="/svar">Til svaroversikt</Link>
+      </div>
       {children}
 
       <div className="full-width">
-        <Link href="/svar">Svaroversikt</Link>
+        <Link href="/svar">Til svaroversikt</Link>
       </div>
     </div>
   );

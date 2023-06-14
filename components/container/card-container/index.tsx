@@ -38,6 +38,6 @@ const cards = [
   { title: "Spørsmål 2", href: "svar/2", brief: "JavaScript og jQuery" },
   { title: "Spørsmål 3", href: "svar/3", brief: "Prinsipper av jQuery" },
   { title: "Spørsmål 4", href: "svar/4", brief: "HTML og hardware tilgang" },
-  { title: "Spørsmål 5", href: "svar/5", brief: "kodesnutt" },
+  { title: "Spørsmål 5", href: "svar/5", brief: "Tellerfunksjon" },
   { title: "Spørsmål 6 & 7", href: "svar/6", brief: "jQuery DOM-manipulering" },
 ];
