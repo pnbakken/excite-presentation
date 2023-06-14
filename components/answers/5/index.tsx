@@ -34,14 +34,17 @@ const Answer5 = () => {
             Først vil koden øke telleren til 1, så vil den redusere til 0.
           </p>
           <p className="slide hidden">
-            Funksjonen setCounter() fungerer slik at den returner enten ett tall
-            høyere eller lavere enn det den får som input, men den gjør
-            ingenting med selve telleren.
+            Dernest forsøker koden å kalle setCounter() med en ugyldig modus, og
+            telleren forblir null.
           </p>
           <p className="slide hidden">
-            Når de senere kallene ikke bruker returverdien til å endre telleren,
-            vil verdien av myCounter forbli 0.
+            Funksjonen setCounter() fungerer slik at den returner enten ett tall
+            høyere eller lavere enn det den får som input, men den gjør
+            ingenting med selve telleren. Når de senere kallene ikke bruker
+            returverdien til å endre telleren, vil verdien av myCounter forbli
+            0.
           </p>
+          <p className="slide hidden"></p>
           <p className="slide hidden">
             <button
               onClick={demoSolution}
@@ -127,7 +130,7 @@ function getCounter(counter) {
 // Øker Telleren
 	myCounter = setCounter(myCounter, "add");
 
-// Reduserer telleren. Moduset "remove" er ikke definert i setCounter funksjonen.
+// Gjør ingenting. Moduset "remove" er ikke definert i setCounter funksjonen så dette vil returnere det uendrete tallet.
 	myCounter = setCounter(myCounter, "remove");
 
 // Starter en nedtellingsfunksjon som øker telleren to ganger, etter ett sekund.

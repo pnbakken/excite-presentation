@@ -15,7 +15,7 @@ function getCounter(counter) {
   // Øker Telleren
   myCounter = setCounter(myCounter, "add");
 
-  // Reduserer telleren. Moduset "remove" er ikke definert i setCounter funksjonen.
+  // Gjør ingenting. Moduset "remove" er ikke definert i setCounter funksjonen så dette vil returnere det uendrete tallet.
   myCounter = setCounter(myCounter, "remove");
 
   // Starter en nedtellingsfunksjon som øker telleren to ganger, etter ett sekund.
